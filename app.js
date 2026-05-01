@@ -122,7 +122,7 @@ function renderPortfolio(items) {
   // Show first 3 cards initially
   const initialCount = 3;
   const buildCard = (item, i) => `
-    <div class="glass-card portfolio-card tilt-3d reveal" style="overflow:hidden;min-width:280px;flex-shrink:0">
+    <div class="glass-card portfolio-card tilt-3d reveal" style="overflow:hidden;width:calc(33.333% - 24px);min-width:280px;max-width:380px;flex-shrink:0">
       <div style="aspect-ratio:1/1;background:var(--surface-2);display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:12px 12px 0 0">
         <img src="${escHtml(item.qrImageUrl)}" alt="${escHtml(item.name)} QR Menu" loading="lazy" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div style="display:none;flex-direction:column;align-items:center;gap:8px;color:var(--text-3)">
@@ -439,6 +439,12 @@ function initMultiStepForm() {
       });
       params.append(gf.fields.source, form.querySelector('[name="source"]')?.value || '');
       params.append(gf.fields.message, form.querySelector('[name="message"]')?.value || '');
+
+      // Multi-page Google Form requires pageHistory to submit all fields
+      params.append('pageHistory', '0,1,2,3');
+      params.append('fvv', '1');
+      params.append('partialResponse', '[null,null,null,null]');
+      params.append('submit', 'Submit');
 
       // Submit via fetch with no-cors (Google Forms doesn't allow CORS)
       await fetch(gf.actionUrl, {
