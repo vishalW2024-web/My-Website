@@ -1,0 +1,10 @@
+{
+  "name": "3D QR Menu",
+  "short_name": "3D QR Menu",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#080B10",
+  "theme_color": "#080B10",
+  "description": "Premium Digital Menus for Restaurants",
+  "icons": []
+}

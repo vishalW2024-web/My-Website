@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D QR Menu | Premium Digital Menus for Restaurants</title>
+  <meta name="description" content="Elevate your restaurant with a premium 3D digital QR menu. One-time payment, free hosting, free professional image enhancement, and instant deployment.">
+  <meta name="theme-color" content="#080B10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <a href="#hero" class="skip-link" id="skip-link">Skip to main content</a>
+
+  <!-- ============================================== INTRO SPLASH ============================================== -->
+  <div id="intro-splash" class="intro-splash" aria-hidden="true">
+    <div class="intro-scene">
+      <div class="intro-ring r1"></div>
+      <div class="intro-ring r2"></div>
+      <div class="intro-dot id1"></div><div class="intro-dot id2"></div><div class="intro-dot id3"></div>
+      <div class="intro-dot id4"></div><div class="intro-dot id5"></div><div class="intro-dot id6"></div>
+    </div>
+    <div class="intro-center">
+      <div class="intro-text-3d">3D</div>
+      <div class="intro-text-qr">QR Menu</div>
+      <div class="intro-text-sub">Premium Digital Menus</div>
+      <!-- Added tagline to splash -->
+      <div class="intro-tagline-splash">The Photo Sells The Dish.</div>
+      <div class="intro-bar"><div class="intro-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ============================================== NAVBAR ============================================== -->
+  <header id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#080B10" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h6v6H3z"/><path d="M15 3h6v6h-6z"/><path d="M3 15h6v6H3z"/>
+            <path d="M21 16h-3v3"/><path d="M18 21h3"/><path d="M12 15v2"/><path d="M15 18v2"/>
+          </svg>
+        </div>
+        3D QR Menu
+      </a>
+      <nav class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="javascript:void(0)" onclick="openImageLibrary()">Enhanced Image Library</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary nav-cta">Get Your Menu</a>
+      <div class="nav-hamburger" id="nav-hamburger" aria-label="Open Menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <div class="nav-mobile-close" id="nav-mobile-close" aria-label="Close Menu" role="button" tabindex="0">✕</div>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#portfolio">Our Portfolio</a>
+    <a href="javascript:void(0)" onclick="openImageLibrary();document.getElementById('nav-mobile').classList.remove('open');document.body.style.overflow=''">Enhanced Image Library</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="btn btn-primary mt-8">Contact Us</a>
+  </div>
+
+  <!-- ============================================== HERO ============================================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="floating-shape shape-diamond fs1"></div>
+    <div class="floating-shape shape-ring fs2"></div>
+    <div class="floating-shape shape-cube fs3"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-text reveal">
+        <p class="hero-tagline">The Photo Sells The Dish.</p>
+        <h1 class="hero-title">
+          Elevate Your Dining Experience with a <span class="text-gold">Premium QR Menu</span>.
+        </h1>
+        <p class="hero-subtitle">
+          Say goodbye to costly printed menus. We craft premium, luxury digital menus that load instantly, require no app, and look stunning on any device.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn btn-primary" id="hero-get-menu-btn">Get Your Menu</a>
+          <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+        </div>
+        <div class="hero-trusted">
+          Trusted by 50+ Top Restaurants &amp; Cafés
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+        <!-- Mobile-only tagline above phone mockup -->
+        <p class="hero-tagline-mobile">The Photo Sells The Dish.</p>
+        <div class="hero-phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" style="padding:0;display:flex;align-items:center;justify-content:center;background:#0a0e14;">
+              <video id="hero-demo-video" src="herovideo.mp4" autoplay muted loop playsinline preload="auto" x-webkit-airplay="allow" disablePictureInPicture disableRemotePlayback style="width:100%;height:100%;object-fit:cover;display:none;"></video>
+              <div class="hero-video-placeholder" id="hero-video-placeholder">
+                <svg viewBox="0 0 64 64" fill="none" style="width:48px;height:48px;">
+                  <circle cx="32" cy="32" r="28" stroke="var(--gold)" stroke-width="1" opacity="0.3"/>
+                  <polygon points="26,20 26,44 46,32" fill="var(--gold)" opacity="0.5"/>
+                </svg>
+                <p style="font-family:var(--font-head);font-size:1rem;color:var(--text-1);margin-top:12px;">Demo Preview</p>
+                <span style="font-size:0.7rem;color:var(--text-3);margin-top:4px;">Loading video…</span>
+              </div>
+            </div>
+            <!-- Mute/Unmute toggle -->
+            <button id="hero-mute-toggle" class="hero-mute-btn" aria-label="Unmute video" title="Unmute video">
+              <svg id="mute-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <line x1="23" y1="9" x2="17" y2="15"/>
+                <line x1="17" y1="9" x2="23" y2="15"/>
+              </svg>
+              <svg id="mute-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="display:none;">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M19.07 4.93a10 10 0 010 14.14"/>
+                <path d="M15.54 8.46a5 5 0 010 7.07"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Future-Proof text positioned below the phone mockup, centered -->
+        <div class="hero-future-proof-below">
+          <span>Future-Proof Your Restaurant</span>
+        </div>
+        <div class="hero-badge-float badge-top-right"><strong>Instant Load</strong><span>No app required</span></div>
+        <div class="hero-badge-float badge-bottom-left"><strong>Unlimited Scans</strong><span>Forever free</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== VALUE PROPS ============================================== -->
+  <section id="value-props" class="section">
+    <div class="container">
+      <div class="value-grid">
+        <div class="value-card tilt-3d reveal">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="value-label">One-Time Payment</div>
+          <div class="value-desc">No hidden monthly fees or subscriptions. You pay once, you own it forever.</div>
+        </div>
+        <div class="value-card tilt-3d reveal reveal-delay-1">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+          </div>
+          <div class="value-label">Free Hosting</div>
+          <div class="value-desc">We host your digital menu on our blazing fast, secure servers completely free of charge.</div>
+        </div>
+        <div class="value-card tilt-3d reveal reveal-delay-2">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <div class="value-label">Easy Updates</div>
+          <div class="value-desc">Need to change a price or add a dish? Send us a WhatsApp message. Two free updates included after delivery.</div>
+        </div>
+        <div class="value-card tilt-3d reveal reveal-delay-3">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="value-label">Fast Deployment</div>
+          <div class="value-desc">Get your beautifully designed, custom digital menu up and running within 72 hours.</div>
+        </div>
+        <!-- 5th card: Offline Ready -->
+        <div class="value-card tilt-3d reveal reveal-delay-3">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0119 12.55"/><path d="M5 12.55a10.94 10.94 0 015.17-2.39"/><path d="M10.71 5.05A16 16 0 0122.56 9"/><path d="M1.42 9a15.91 15.91 0 014.7-2.88"/><path d="M8.53 16.11a6 6 0 016.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="value-label">Offline Ready</div>
+          <div class="value-desc">Your menu loads even on weak WiFi or no connection after the first scan — so no table ever waits.</div>
+        </div>
+        <!-- 6th card centered on mobile -->
+        <div class="value-card tilt-3d reveal reveal-delay-3 value-card-center">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
+          <div class="value-label">Free Image Library</div>
+          <div class="value-desc">Send us your raw photos — we professionally enhance and upscale them to match your outlet's theme. Better than studio photography.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== HOW IT WORKS ============================================== -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <div class="how-header reveal">
+        <span class="section-label">The Process</span>
+        <h2 class="section-title">Seamless setup in <span class="text-gold">3 Easy Steps</span></h2>
+        <p class="section-subtitle mx-auto">We handle all the technical heavy lifting so you can focus on serving great food.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card tilt-3d reveal">
+          <div class="step-number">1</div>
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+          <h3 class="step-title">Send Your Menu</h3>
+          <p class="step-desc">Share your current PDF, image, or website menu with us through WhatsApp or Email.</p>
+        </div>
+        <div class="step-card tilt-3d reveal reveal-delay-1">
+          <div class="step-number">2</div>
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+          <h3 class="step-title">We Build It</h3>
+          <p class="step-desc">Our design team creates a luxury, mobile-optimized digital version of your menu with enhanced images.</p>
+        </div>
+        <div class="step-card tilt-3d reveal reveal-delay-2">
+          <div class="step-number">3</div>
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h3 class="step-title">Scan &amp; Serve</h3>
+          <p class="step-desc">We deliver your custom QR code ready to print for tables, standees, and flyers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== IMAGE ENHANCEMENT ============================================== -->
+  <section id="image-service" class="section" style="background:var(--surface-2);">
+    <div class="floating-shape shape-diamond fs4"></div>
+    <div class="container z-1 relative">
+      <div class="image-service-inner">
+        <div class="image-service-text reveal">
+          <span class="section-label section-label-big"><strong>✦ Exclusive Bonus ✦</strong></span>
+          <h2 class="section-title">Free <span class="text-gold">Image Enhancement</span></h2>
+          <div class="image-service-features">
+            <div class="image-service-feature">
+              <div class="isf-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></div>
+              Send us raw photos from your phone camera
+            </div>
+            <div class="image-service-feature">
+              <div class="isf-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></div>
+              We enhance &amp; upscale to professional quality
+            </div>
+            <div class="image-service-feature">
+              <div class="isf-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></div>
+              Perfectly matched to your outlet's brand &amp; theme
+            </div>
+            <div class="image-service-feature">
+              <div class="isf-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></div>
+              Use the images anywhere — menus, social media, marketing
+            </div>
+          </div>
+        </div>
+        <!-- Before/After visual — dynamically rendered from Excel -->
+        <div class="image-service-visual reveal reveal-delay-1">
+          <div id="before-after-container" class="before-after-container">
+            <p style="color:var(--text-3);text-align:center;padding:40px">Loading image comparisons...</p>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile capture note at bottom center of section -->
+      <div class="mobile-capture-banner reveal">
+        <p class="mobile-capture-text">Even mobile phone camera photos are welcome — we enhance everything.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== THE IMPACT ============================================== -->
+  <section id="the-impact" class="section">
+    <div class="container">
+      <div class="impact-header reveal">
+        <span class="section-label">Why It Matters</span>
+        <h2 class="section-title">The <span class="text-gold">Impact</span></h2>
+      </div>
+      <div class="impact-cards-grid">
+        <div class="impact-card tilt-3d reveal">
+          <div class="impact-card-number">01</div>
+          <h3 class="impact-card-title">Before the Order</h3>
+          <p class="impact-card-body">Guests decide with their eyes. A stunning visual menu makes them want more before they've even tasted anything — driving higher selections and bigger orders.</p>
+        </div>
+        <div class="impact-card tilt-3d reveal reveal-delay-1">
+          <div class="impact-card-number">02</div>
+          <h3 class="impact-card-title">During the Meal</h3>
+          <p class="impact-card-body">Your restaurant becomes the experience. Guests explore, share, and stay engaged — turning every table into a brand moment.</p>
+        </div>
+        <div class="impact-card tilt-3d reveal reveal-delay-2">
+          <div class="impact-card-number">03</div>
+          <h3 class="impact-card-title">After They Leave</h3>
+          <p class="impact-card-body">Your brand travels with them. Guests screenshot, share, and return — because a beautiful menu stays memorable long after the bill is paid.</p>
+        </div>
+      </div>
+      <!-- Cinematic image + stat text replacing old red/green boxes -->
+      <div class="impact-visual-stat reveal">
+        <img src="A_bold%2C_cinematic_202604202211.png" alt="Before vs After — Average Order Value comparison" class="impact-stat-image" loading="lazy">
+        <p class="impact-stat-caption">Restaurants using visual digital menus report <strong>48–56% higher</strong> average order value.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== REPRINT COST CALCULATOR ============================================== -->
+  <section id="reprint-calc" class="section">
+    <div class="container">
+      <div class="calc-header reveal">
+        <span class="section-label">💸 Save Money</span>
+        <h2 class="section-title">How Much Are Paper Menus <span class="text-gold">Costing You?</span></h2>
+        <p class="section-subtitle mx-auto" style="font-style:italic;color:var(--text-2)">Most restaurant owners are shocked when they see this number.</p>
+      </div>
+      <div class="calc-grid reveal reveal-delay-1">
+        <div class="calc-inputs">
+          <div class="calc-intro-heading">
+            <h3 class="calc-lets-calculate">Let's Calculate for you</h3>
+            <p class="calc-lets-calculate-sub">Input your values below for Reality Check</p>
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calc-qty">Menus you print?</label>
+            <input type="number" id="calc-qty" class="form-input" placeholder="e.g 8" min="1">
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calc-cost">Cost per printing?</label>
+            <input type="number" id="calc-cost" class="form-input" placeholder="e.g $30" min="0" step="0.5">
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calc-reprints">Prints per year?</label>
+            <input type="number" id="calc-reprints" class="form-input" placeholder="6 (every two months we update menu)" min="1">
+          </div>
+        </div>
+        <div id="calc-seasonal-fields">
+          <div class="calc-field calc-seasonal-names">
+            <label class="form-label">Extra Spent for Seasonal Menu</label>
+            <div class="calc-seasonal-name-list">
+              <span class="seasonal-name-tag">Christmas</span>
+              <span class="seasonal-name-tag">Halloween</span>
+              <span class="seasonal-name-tag">New Year</span>
+              <span class="seasonal-name-tag">Valentine's Day</span>
+              <span class="seasonal-name-tag">Easter</span>
+              <span class="seasonal-name-tag">Summer Special</span>
+              <span class="seasonal-name-tag">Other</span>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calc-seasonal-count">How many seasonal menu you have?</label>
+            <input type="number" id="calc-seasonal-count" class="form-input" placeholder="e.g 4" min="1">
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calc-seasonal-qty">How many menus per season print?</label>
+            <input type="number" id="calc-seasonal-qty" class="form-input" placeholder="e.g 8" min="1">
+          </div>
+          <div class="calc-field">
+            <label class="form-label" for="calc-seasonal-cost">Cost per seasonal menu?</label>
+            <input type="number" id="calc-seasonal-cost" class="form-input" placeholder="e.g $30" min="0" step="0.5">
+          </div>
+        </div>
+        <div class="calc-results" id="calc-results">
+          <div class="calc-result-box calc-result-bad">
+            <div class="calc-result-label">You are spending</div>
+            <div class="calc-result-amount" id="calc-yearly">$0</div>
+            <div class="calc-result-sub">per year on printed menus.</div>
+            <div class="calc-result-detail">Over 5 years: <strong id="calc-5year">$0</strong> gone — forever.</div>
+            <p class="calc-result-note">That's money that buys you nothing. No data. No updates. No brand. Just paper.</p>
+          </div>
+          <div class="calc-result-box calc-result-good">
+            <div class="calc-result-label">With 3D QR Menu:</div>
+            <div class="calc-result-amount">$0 every year</div>
+            <div class="calc-result-sub">after today.</div>
+            <p class="calc-result-note">One payment. Unlimited scans. Update anytime. Your menu works harder while you sleep.</p>
+          </div>
+        </div>
+      </div>
+      <p class="calc-closing-line reveal" id="calc-closing" style="display:none">
+        "You've already spent more on paper than this menu costs. The question isn't whether you can afford it — it's how long you keep paying for nothing."
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================== PORTFOLIO ============================================== -->
+  <section id="portfolio" class="section">
+    <div class="orb orb-gold" style="top:-10%;right:-5%;width:600px;height:600px"></div>
+    <div class="container z-1 relative">
+      <div class="portfolio-header reveal">
+        <div>
+          <span class="section-label">Experience Our Work</span>
+          <h2 class="section-title">Designed for <span class="text-gold">Excellence</span></h2>
+          <p class="section-subtitle">A selection of premium digital menus we've crafted.</p>
+        </div>
+      </div>
+      <div id="portfolio-scroll-wrapper" class="portfolio-scroll-wrapper">
+        <div id="portfolio-grid" class="portfolio-grid">
+          <!-- Rendered dynamically by app.js from Excel -->
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:var(--sp-6);display:flex;flex-direction:column;align-items:center;gap:var(--sp-4)">
+        <button class="btn btn-primary" id="portfolio-view-all-btn" style="display:none;padding:14px 48px;font-size:1.05rem;font-weight:700">View All</button>
+        <a href="#contact" class="btn btn-outline" style="white-space:nowrap;padding:16px 48px;font-size:1.15rem;font-weight:700;letter-spacing:0.03em">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== TESTIMONIALS ============================================== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="testimonials-header reveal">
+        <span class="section-label">⭐ Social Proof</span>
+        <h2 class="section-title">What Restaurant Owners <span class="text-gold">Say</span></h2>
+      </div>
+      <div class="testimonial-card glass-card tilt-3d reveal reveal-delay-1">
+        <div class="testimonial-stars">
+          <svg class="luxury-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="luxury-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="luxury-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="luxury-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="luxury-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "We switched from printed menus to the 3D QR Menu and our dessert orders went up immediately. Guests actually sit and scroll through everything instead of asking what's available. The image quality is stunning — looks like a professional photoshoot."
+        </blockquote>
+        <div class="testimonial-author">
+          <strong>Dessert Dudess</strong> <span>| Dessert Shop</span>
+        </div>
+      </div>
+      <p class="testimonial-trust reveal" style="text-align:center;color:var(--text-3);font-style:italic;margin-top:var(--sp-6);font-size:0.9rem">
+        Trusted by 50+ restaurants and cafés across the globe.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================== PRICING ============================================== -->
+  <section id="pricing" class="section">
+    <div class="orb orb-amber" style="bottom:10%;left:0;width:500px;height:500px"></div>
+    <div class="floating-shape shape-cube fs5"></div>
+    <div class="container z-1 relative">
+      <div class="pricing-header reveal">
+        <span class="section-label">Investment</span>
+        <h2 class="section-title">Simple, transparent <span class="text-gold">pricing</span></h2>
+      </div>
+      <div class="pricing-card reveal reveal-delay-1">
+        <div class="pricing-card-inner">
+          <div class="pricing-badge pricing-badge-centered">LIFETIME ACCESS</div>
+          <div class="pricing-price pricing-price-centered"><span class="pricing-currency"><strong>One-Time Payment</strong></span></div>
+          <div class="pricing-gold-divider"></div>
+          <!-- Value Stack Table -->
+          <div class="value-stack">
+            <div class="value-stack-row">
+              <span class="value-stack-item">Custom Luxury Digital Menu Design</span>
+              <span class="value-stack-price">$800</span>
+            </div>
+            <div class="value-stack-row">
+              <span class="value-stack-item">Lifetime Free Hosting (no renewals ever)</span>
+              <span class="value-stack-price">$200</span>
+            </div>
+            <div class="value-stack-row">
+              <span class="value-stack-item">Professional AI Image Enhancement (up to 25 images)</span>
+              <span class="value-stack-price">$600</span>
+            </div>
+            <div class="value-stack-row">
+              <span class="value-stack-item">High-Res QR Code</span>
+              <span class="value-stack-price">$50/mo</span>
+            </div>
+            <div class="value-stack-row">
+              <span class="value-stack-item">Print-Ready "How to Scan" Table Card</span>
+              <span class="value-stack-price">$30</span>
+            </div>
+            <div class="value-stack-row">
+              <span class="value-stack-item">2 Free Menu Updates After Delivery</span>
+              <span class="value-stack-price">$300</span>
+            </div>
+          </div>
+          <div class="value-stack-total">
+            <div class="value-stack-total-label">Total Value: <strong>$1,980+</strong></div>
+            <div class="value-stack-your-price">Your One Time Investment<br><strong>Only at $799</strong></div>
+          </div>
+          <!-- Guarantee Box -->
+          <div class="guarantee-box">
+            <div class="guarantee-icon">🛡️</div>
+            <div class="guarantee-text">
+              <strong>72-Hour Delivery Guarantee</strong>
+              <p>Your custom digital menu will be live within 72 hours — or we'll make it right, no questions asked.</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary w-full" style="padding:16px;font-size:1.05rem;font-weight:700">Get Your Menu Live in 72 Hours →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== FAQ ============================================== -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="faq-header reveal"><h2 class="section-title">Common <span class="text-gold">Questions</span></h2></div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Do my customers need to download an app?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. Every smartphone has built-in QR readers in their camera apps. Customers simply point their camera, tap the link, and view your menu instantly in their web browser.</div></div>
+        </div>
+        <!-- 6th question moved to 2nd position -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            What if I don't have professional food photos?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">That's exactly what our $600 worth image enhancement service is for. Send us any photos — even low-quality phone camera shots — and our team will enhance, color-grade, and upscale them to professional quality. This is included free with every menu, not a paid add-on.</div></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            How do I update menu items or prices?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Simply send us a WhatsApp message with the changes you need. Every menu includes 2 free updates after delivery — we'll make the change live within minutes. Additional updates beyond that are available at a small flat fee.</div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Are there any hidden hosting fees?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely not. Your one-time payment covers the custom design, free development, QR code generation, professional image enhancement, and lifetime hosting on free high-speed servers.</div></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question" aria-expanded="false">
+            Can I update the menu after delivery?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. You get two free updates included after delivery — perfect for seasonal changes, price adjustments, or adding new dishes. Additional updates beyond that are available at a minimal cost.</div></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question" aria-expanded="false">
+            What about the free image enhancement?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Just send us your raw food photos taken from your phone. Our team will professionally enhance, upscale, and color-grade them to perfectly match your outlet's theme. You get to keep and use these enhanced images anywhere — on social media, flyers, or any marketing material.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== WHY CHOOSE US ============================================== -->
+  <section id="why-choose-us" class="section" style="background:var(--surface-2);">
+    <div class="container">
+      <div class="comparison-header reveal">
+        <span class="section-label">The Difference</span>
+        <h2 class="section-title">Why Choose <span class="text-gold">Us?</span></h2>
+      </div>
+      <div class="comparison-grid reveal">
+        <div class="comparison-col comparison-col-bad">
+          <div class="comparison-col-header comparison-header-bad">Other Digital Menu Services</div>
+          <div class="comparison-item"><span class="comparison-cross">✗</span> Monthly subscription fees ($45 - $150 /mo) + Installation Fees</div>
+          <div class="comparison-item"><span class="comparison-cross">✗</span> Generic templates, no customization</div>
+          <div class="comparison-item"><span class="comparison-cross">✗</span> You provide your own photos</div>
+          <div class="comparison-item"><span class="comparison-cross">✗</span> 5–14 day delivery timelines</div>
+          <div class="comparison-item"><span class="comparison-cross">✗</span> Extra charges for every single update</div>
+          <div class="comparison-item"><span class="comparison-cross">✗</span> Hosting fees after year one</div>
+        </div>
+        <div class="comparison-col comparison-col-good">
+          <div class="comparison-col-header comparison-header-good">3D QR Menu</div>
+          <div class="comparison-item"><span class="comparison-check">✓</span> One-time payment. Own it forever.</div>
+          <div class="comparison-item"><span class="comparison-check">✓</span> Fully custom luxury design, built for you</div>
+          <div class="comparison-item"><span class="comparison-check">✓</span> Free professional image enhancement included</div>
+          <div class="comparison-item"><span class="comparison-check">✓</span> Live in 48–72 hours, guaranteed</div>
+          <div class="comparison-item"><span class="comparison-check">✓</span> 2 free updates included — delivered via WhatsApp in minutes</div>
+          <div class="comparison-item"><span class="comparison-check">✓</span> Free hosting forever. No exceptions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== CONTACT (Multi-step custom form) ============================================== -->
+  <section id="contact" class="section">
+    <div class="container contact-inner">
+      <div class="contact-info reveal">
+        <span class="section-label">Get Started</span>
+        <h2 class="contact-info-title">Let's build your <span class="text-gold">digital presence</span></h2>
+        <p class="contact-info-text">Ready to upgrade your restaurant experience? Fill out the form or reach out directly on WhatsApp for an immediate response.</p>
+        <div class="contact-highlights">
+          <div class="contact-highlight">
+            <div class="contact-highlight-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            Your menu delivered within 72 hours, guaranteed
+          </div>
+          <div class="contact-highlight">
+            <div class="contact-highlight-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+            Free professional image enhancement included
+          </div>
+          <div class="contact-highlight">
+            <div class="contact-highlight-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            And many features worth <strong style="color:var(--gold)">$1,980</strong> at just <strong style="color:var(--gold);font-size:1.6rem" class="contact-price-highlight">$799</strong>
+          </div>
+        </div>
+        <a href="https://wa.me/918459987710?text=Hi%203D%20QR%20Menu%2C%20I%27m%20interested%20in%20a%20digital%20menu%20for%20my%20restaurant." class="btn btn-whatsapp w-full mt-8" style="justify-content:center" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Chat on WhatsApp
+        </a>
+      </div>
+      <!-- Multi-step form integrated with Google Forms -->
+      <div class="contact-form-card glass-card reveal reveal-delay-1">
+        <div class="form-cta-heading">
+          <h3>Fill the form to get detailed information via email</h3>
+        </div>
+        <form id="contact-form" novalidate>
+          <!-- Step indicators -->
+          <div class="form-steps-indicator">
+            <div class="step-dot active" data-step="1">1</div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="2">2</div>
+            <div class="step-line"></div>
+            <div class="step-dot" data-step="3">3</div>
+          </div>
+
+          <!-- Step 1: Basic Information -->
+          <div class="form-step active" id="form-step-1">
+            <h3 class="form-step-title">Basic Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="field-name">Full Name <span>*</span></label>
+                <input type="text" name="name" id="field-name" class="form-input" placeholder="John Doe" required autocomplete="name">
+                <span class="form-field-error" role="alert" aria-live="polite" style="display:none">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-email">Email Address <span>*</span></label>
+                <input type="email" name="email" id="field-email" class="form-input" placeholder="john@example.com" required autocomplete="email">
+                <span class="form-field-error" role="alert" aria-live="polite" style="display:none">Please enter a valid email</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-phone">Phone / WhatsApp <span>*</span></label>
+                <input type="tel" name="phone" id="field-phone" class="form-input" placeholder="+91 84599 87710" required autocomplete="tel">
+                <span class="form-field-error" role="alert" aria-live="polite" style="display:none">Please enter your phone number</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-business">Business / Outlet Name <span>*</span></label>
+                <input type="text" name="business_name" id="field-business" class="form-input" placeholder="The Spice Garden" required autocomplete="organization">
+                <span class="form-field-error" role="alert" aria-live="polite" style="display:none">Please enter your business name</span>
+              </div>
+            </div>
+            <div class="form-nav-row">
+              <div></div>
+              <button type="button" class="btn btn-primary form-next-btn" data-next="2">Next →</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Business Details + Goals -->
+          <div class="form-step" id="form-step-2">
+            <h3 class="form-step-title">Business Details</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="field-outlet-type">Type of Outlet <span>*</span></label>
+                <select name="outlet_type" id="field-outlet-type" class="form-input form-select" required>
+                  <option value="" disabled selected>Select type...</option>
+                  <option>Restaurant (Dine-In)</option>
+                  <option>Café / Coffee Shop</option>
+                  <option>Bar / Lounge / Pub</option>
+                  <option>Cloud Kitchen / Delivery-Only</option>
+                  <option>Bakery / Dessert Shop</option>
+                  <option>Food Truck / Pop-Up</option>
+                  <option>Hotel / Resort F&amp;B</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-locations">Number of Locations <span>*</span></label>
+                <select name="locations" id="field-locations" class="form-input form-select" required>
+                  <option value="" disabled selected>Select...</option>
+                  <option>1 — Single Location</option>
+                  <option>2–5 Locations</option>
+                  <option>6–15 Locations</option>
+                  <option>15+ Locations (Enterprise)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-city">City <span>*</span></label>
+                <input type="text" name="city" id="field-city" class="form-input" placeholder="Mumbai" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="field-country">Country <span>*</span></label>
+                <input type="text" name="country" id="field-country" class="form-input" placeholder="India" required>
+              </div>
+            </div>
+            <h4 class="form-step-title" style="margin-top:var(--sp-6)">What Are You Looking For?</h4>
+            <p class="form-step-sub">Select all that apply</p>
+            <div class="form-checkbox-grid">
+              <label class="form-checkbox-label"><input type="checkbox" name="goals" value="Elevate the look and feel of my menu"> Elevate the look and feel of my menu</label>
+              <label class="form-checkbox-label"><input type="checkbox" name="goals" value="Increase average order value"> Increase average order value</label>
+              <label class="form-checkbox-label"><input type="checkbox" name="goals" value="Get professional-quality food photos"> Get professional-quality food photos</label>
+              <label class="form-checkbox-label"><input type="checkbox" name="goals" value="Replace printed / paper menus"> Replace printed / paper menus</label>
+              <label class="form-checkbox-label"><input type="checkbox" name="goals" value="Build a stronger brand experience"> Build a stronger brand experience</label>
+              <label class="form-checkbox-label"><input type="checkbox" name="goals" value="Add a menu for delivery platforms"> Add a menu for delivery platforms</label>
+            </div>
+            <div class="form-nav-row">
+              <button type="button" class="btn btn-ghost form-prev-btn" data-prev="1">← Back</button>
+              <button type="button" class="btn btn-primary form-next-btn" data-next="3">Next →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Additional Info -->
+          <div class="form-step" id="form-step-3">
+            <h3 class="form-step-title">Additional Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="field-source">How did you find us?</label>
+                <select name="source" id="field-source" class="form-input form-select">
+                  <option value="" disabled selected>Select...</option>
+                  <option>WhatsApp / Cold Message</option>
+                  <option>Email Outreach</option>
+                  <option>Instagram</option>
+                  <option>Referred by Someone</option>
+                  <option>Google Search</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="field-message">Short Message (Optional)</label>
+                <textarea name="message" id="field-message" class="form-textarea" placeholder="Anything else you'd like us to know..."></textarea>
+              </div>
+            </div>
+            <div class="form-nav-row">
+              <button type="button" class="btn btn-ghost form-prev-btn" data-prev="2">← Back</button>
+              <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                Submit
+              </button>
+            </div>
+          </div>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== FOOTER ============================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-logo">
+            <div class="nav-logo-icon" style="width:32px;height:32px">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#080B10" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px">
+                <path d="M3 3h6v6H3z"/><path d="M15 3h6v6h-6z"/><path d="M3 15h6v6H3z"/><path d="M21 16h-3v3"/><path d="M18 21h3"/><path d="M12 15v2"/><path d="M15 18v2"/>
+              </svg>
+            </div>
+            3D QR Menu
+          </div>
+          <p class="footer-brand-desc">Crafting premium, luxury digital menus for restaurants. Elevate your dining experience today.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://wa.me/918459987710" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Solutions</h4>
+          <div class="footer-links">
+            <a href="#portfolio">Restaurant Menus</a>
+            <a href="#portfolio">Café Menus</a>
+            <a href="#portfolio">Bar &amp; Lounge Menus</a>
+            <a href="#pricing">Pricing</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <div class="footer-links">
+            <a href="#how-it-works">How it Works</a>
+            <a href="#image-service">Image Enhancement</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">&copy; 2026 3D QR Menu. All rights reserved.</div>
+        <div class="footer-bottom-social">
+          <a href="#" aria-label="Instagram" class="footer-social-link"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/918459987710" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="footer-social-link"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== IMAGE LIBRARY OVERLAY ============================================== -->
+  <div id="image-library-overlay" class="il-overlay" style="display:none">
+    <!-- Rendered dynamically by app.js -->
+  </div>
+
+  <!-- ============================================== PORTFOLIO MODAL ============================================== -->
+  <div class="portfolio-modal-backdrop" id="portfolio-modal-backdrop" aria-hidden="true">
+    <div class="portfolio-modal" id="portfolio-modal" role="dialog" aria-labelledby="modal-restaurant-name" aria-modal="true">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-qr-display"><img id="modal-qr-img" src="" alt="QR Code" loading="lazy"></div>
+      <div style="text-align:center;margin-bottom:var(--sp-8)">
+        <p id="modal-restaurant-category" style="font-size:0.8rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--sp-2)">Category</p>
+        <h3 id="modal-restaurant-name" class="modal-qr-name">Restaurant Name</h3>
+        <p style="font-size:0.9rem;color:var(--text-2);line-height:1.6">Scan the QR code above with your phone camera to view the live digital menu.</p>
+      </div>
+      <div class="modal-cta-row">
+        <a href="https://wa.me/918459987710?text=Hi%2C%20I%20want%20a%20menu%20like%20this%20for%20my%20restaurant!" id="modal-whatsapp-btn" class="btn btn-whatsapp w-full" target="_blank" rel="noopener noreferrer" style="justify-content:center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Get this for your restaurant
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js')
+          .then(function(reg) { console.log('SW registered:', reg.scope); })
+          .catch(function(err) { console.log('SW registration failed:', err); });
+      });
+    }
+  </script>
+</body>
+</html>
